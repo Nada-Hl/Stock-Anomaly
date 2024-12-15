@@ -1,0 +1,995 @@
+<!--
+=========================================================
+* Material Dashboard 3 - v3.2.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/material-dashboard
+* Copyright 2024 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (https://www.creative-tim.com/license)
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="../static/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../static/img/favicon.png">
+  <title>
+    Material Dashboard 3 by Creative Tim
+  </title>
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700,900" />
+  <!-- Nucleo Icons -->
+  <link href="../static/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="../static/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <!-- Material Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <!-- CSS Files -->
+  <link id="pagestyle" href="../static/css/material-dashboard.css?v=3.2.0" rel="stylesheet" />
+
+  <style>
+    .carousel-control-prev, .carousel-control-next {
+      height: 150px;
+      width: 30px;
+    }
+  
+  </style>
+</head>
+
+<body class="g-sidenav-show  bg-gray-100">
+  
+  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+   <!-- Carousel Container -->
+
+   <div class="container-fluid py-2">
+    <div class="row">
+      <div class="ms-3">
+        <a class="navbar-brand px-4 py-3 m-0" href=" https://demos.creative-tim.com/material-dashboard/pages/dashboard " target="_blank">
+          <img src="..\static\img\logo.png" class="navbar-brand-img" width="50" height="50" alt="main_logo">
+          <span class="ms-4 text-dark" style="font-size: 20px;">Your Microsoft Anomaly Detector</span>
+        </a>
+        <br>
+        <br>
+      </div>
+
+      <div id="cardsCarousel" class="carousel slide" data-bs-ride="carousel">
+        <!-- Carousel Inner -->
+        <div class="carousel-inner">
+          <div class="carousel-item active" id="anomalies-placeholder">
+            <div class="row">
+              <!-- First 4 Cards -->
+
+
+              <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+                <div class="card">
+                  <div class="card-header p-2 ps-3">
+                    <div class="d-flex justify-content-between">
+                      <div>
+                        <p class="text-sm mb-0 text-capitalize">January 2024</p>
+                        <h4 class="mb-0 anomalyCount">Loading...</h4>
+                      </div>
+                      <div class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-lg">
+                        <i class="material-symbols-rounded opacity-10" style="color: #D282A6;">leaderboard</i>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="dark horizontal my-0">
+                  <div class="card-footer p-2 ps-3">
+                    <p class="mb-0 text-sm anomalyPercentage"><span class="text-success font-weight-bolder">Loading...</span>than last week</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+                <div class="card">
+                  <div class="card-header p-2 ps-3">
+                    <div class="d-flex justify-content-between">
+                      <div>
+                        <p class="text-sm mb-0 text-capitalize">February 2024</p>
+                        <h4 class="mb-0 anomalyCount">Loading...</h4>
+                      </div>
+                      <div class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-lg">
+                        <i class="material-symbols-rounded opacity-10" style="color: #D282A6;">leaderboard</i>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="dark horizontal my-0">
+                  <div class="card-footer p-2 ps-3">
+                    <p class="mb-0 text-sm anomalyPercentage"><span class="text-success font-weight-bolder">Loading...</span>than last week</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+                <div class="card">
+                  <div class="card-header p-2 ps-3">
+                    <div class="d-flex justify-content-between">
+                      <div>
+                        <p class="text-sm mb-0 text-capitalize">March 2024</p>
+                        <h4 class="mb-0 anomalyCount">Loading...</h4>
+                      </div>
+                      <div class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-lg">
+                        <i class="material-symbols-rounded opacity-10" style="color: #D282A6;">leaderboard</i>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="dark horizontal my-0">
+                  <div class="card-footer p-2 ps-3">
+                    <p class="mb-0 text-sm anomalyPercentage"><span class="text-success font-weight-bolder">Loading...</span>than last week</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-3 col-sm-6">
+                <div class="card">
+                  <div class="card-header p-2 ps-3">
+                    <div class="d-flex justify-content-between">
+                      <div>
+                        <p class="text-sm mb-0 text-capitalize">April 2024</p>
+                        <h4 class="mb-0 anomalyCount">Loading...</h4>
+                      </div>
+                      <div class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-lg">
+                        <i class="material-symbols-rounded opacity-10" style="color: #D282A6;">leaderboard</i>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="dark horizontal my-0">
+                  <div class="card-footer p-2 ps-3">
+                    <p class="mb-0 text-sm anomalyPercentage"><span class="text-success font-weight-bolder">Loading...</span>than last week</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row">
+
+              <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+                <div class="card">
+                  <div class="card-header p-2 ps-3">
+                    <div class="d-flex justify-content-between">
+                      <div>
+                        <p class="text-sm mb-0 text-capitalize">May 2024</p>
+                        <h4 class="mb-0 anomalyCount">Loading...</h4>
+                      </div>
+                      <div class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-lg">
+                        <i class="material-symbols-rounded opacity-10" style="color: #D282A6;">leaderboard</i>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="dark horizontal my-0">
+                  <div class="card-footer p-2 ps-3">
+                    <p class="mb-0 text-sm anomalyPercentage"><span class="text-success font-weight-bolder">Loading...</span>than last week</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+                <div class="card">
+                  <div class="card-header p-2 ps-3">
+                    <div class="d-flex justify-content-between">
+                      <div>
+                        <p class="text-sm mb-0 text-capitalize">June 2024</p>
+                        <h4 class="mb-0 anomalyCount">Loading...</h4>
+                      </div>
+                      <div class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-lg">
+                        <i class="material-symbols-rounded opacity-10" style="color: #D282A6;">leaderboard</i>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="dark horizontal my-0">
+                  <div class="card-footer p-2 ps-3">
+                    <p class="mb-0 text-sm anomalyPercentage"><span class="text-success font-weight-bolder">Loading...</span>than last week</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+                <div class="card">
+                  <div class="card-header p-2 ps-3">
+                    <div class="d-flex justify-content-between">
+                      <div>
+                        <p class="text-sm mb-0 text-capitalize">July 2024</p>
+                        <h4 class="mb-0 anomalyCount">Loading...</h4>
+                      </div>
+                      <div class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-lg">
+                        <i class="material-symbols-rounded opacity-10" style="color: #D282A6;">leaderboard</i>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="dark horizontal my-0">
+                  <div class="card-footer p-2 ps-3">
+                    <p class="mb-0 text-sm anomalyPercentage"><span class="text-success font-weight-bolder">Loading...</span>than last week</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+                <div class="card">
+                  <div class="card-header p-2 ps-3">
+                    <div class="d-flex justify-content-between">
+                      <div>
+                        <p class="text-sm mb-0 text-capitalize">August 2024</p>
+                        <h4 class="mb-0 anomalyCount">Loading...</h4>
+                      </div>
+                      <div class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-lg">
+                        <i class="material-symbols-rounded opacity-10" style="color: #D282A6;">leaderboard</i>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="dark horizontal my-0">
+                  <div class="card-footer p-2 ps-3">
+                    <p class="mb-0 text-sm anomalyPercentage"><span class="text-success font-weight-bolder">Loading...</span>than last week</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row">
+
+              <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+                <div class="card">
+                  <div class="card-header p-2 ps-3">
+                    <div class="d-flex justify-content-between">
+                      <div>
+                        <p class="text-sm mb-0 text-capitalize">September 2024</p>
+                        <h4 class="mb-0 anomalyCount">Loading...</h4>
+                      </div>
+                      <div class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-lg">
+                        <i class="material-symbols-rounded opacity-10" style="color: #D282A6;">leaderboard</i>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="dark horizontal my-0">
+                  <div class="card-footer p-2 ps-3">
+                    <p class="mb-0 text-sm anomalyPercentage"><span class="text-success font-weight-bolder">Loading...</span>than last week</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+                <div class="card">
+                  <div class="card-header p-2 ps-3">
+                    <div class="d-flex justify-content-between">
+                      <div>
+                        <p class="text-sm mb-0 text-capitalize">October 2024</p>
+                        <h4 class="mb-0 anomalyCount">Loading...</h4>
+                      </div>
+                      <div class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-lg">
+                        <i class="material-symbols-rounded opacity-10" style="color: #D282A6;">leaderboard</i>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="dark horizontal my-0">
+                  <div class="card-footer p-2 ps-3">
+                    <p class="mb-0 text-sm anomalyPercentage"><span class="text-success font-weight-bolder">Loading...</span>than last week</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+                <div class="card">
+                  <div class="card-header p-2 ps-3">
+                    <div class="d-flex justify-content-between">
+                      <div>
+                        <p class="text-sm mb-0 text-capitalize">November 2024</p>
+                        <h4 class="mb-0 anomalyCount">Loading...</h4>
+                      </div>
+                      <div class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-lg">
+                        <i class="material-symbols-rounded opacity-10" style="color: #D282A6;">leaderboard</i>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="dark horizontal my-0">
+                  <div class="card-footer p-2 ps-3">
+                    <p class="mb-0 text-sm anomalyPercentage"><span class="text-success font-weight-bolder">Loading...</span>than last week</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+                <div class="card">
+                  <div class="card-header p-2 ps-3">
+                    <div class="d-flex justify-content-between">
+                      <div>
+                        <p class="text-sm mb-0 text-capitalize">December 2024</p>
+                        <h4 class="mb-0 anomalyCount">Loading...</h4>
+                      </div>
+                      <div class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-lg">
+                        <i class="material-symbols-rounded opacity-10" style="color: #D282A6;">leaderboard</i>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="dark horizontal my-0">
+                  <div class="card-footer p-2 ps-3">
+                    <p class="mb-0 text-sm anomalyPercentage"><span class="text-success font-weight-bolder">Loading...</span>than last week</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>
+</div>
+<button class="carousel-control-prev" type="button" data-bs-target="#cardsCarousel" data-bs-slide="prev">
+  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Previous</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#cardsCarousel" data-bs-slide="next">
+  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Next</span>
+</button>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+      const anomaliesElement = document.getElementById("anomalies-placeholder"); // Ensure you have a placeholder in HTML for anomalies data
+      
+      // Fetch the anomalies data
+      fetch('/anomalies')
+          .then(response => {
+              if (!response.ok) {
+                  throw new Error('Network response was not ok');
+              }
+              return response.json();
+          })
+          .then(data => {
+              // Check if data exists and is not empty
+              if (!data || data.length === 0) {
+                  throw new Error('No anomalies data received');
+              }
+
+              // Loop through the data and update the DOM
+              data.forEach((monthData, index) => {
+                  const month = monthData.Month;
+                  const anomalyCount = monthData.Anomalies;
+                  const anomalyPercentage = monthData.Percentage_Change.toFixed(2);
+                  
+                  // Get the appropriate card or element (based on the month index)
+                  const anomalyCountElem = document.getElementsByClassName('anomalyCount')[index];
+                  const anomalyPercentageElem = document.getElementsByClassName('anomalyPercentage')[index];
+
+                  // Update the values
+                  if (anomalyCountElem) anomalyCountElem.textContent = anomalyCount;
+                  if (anomalyPercentageElem) anomalyPercentageElem.innerHTML = `${anomalyPercentage}% than last month`;
+              });
+          })
+          .catch(error => {
+              console.error('Error loading anomalies:', error);
+              
+              // Display error message in the UI
+              anomaliesElement.innerHTML = `
+                  <div class="alert alert-danger" role="alert">
+                      Unable to load anomalies. Please try again later.
+                      <br>Error: ${error.message}
+                  </div>
+              `;
+          });
+  });
+</script>
+
+
+
+  <!--The charts and the graphs  -->
+
+      <div class="row">
+
+        <div class="col-lg-4 col-md-6 mt-4 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <h6 class="mb-0 ">Overview</h6>
+              <p class="text-sm ">All the anomalies in the company history </p>
+              <div class="pe-2">
+                <div class="chart">
+                  <img src="https://stockanomaly.blob.core.windows.net/containerstock/anomaly.png" alt="Chart Image" class="img-fluid" style="height: 170px; width:auto ; object-fit: contain;">
+                </div>
+              </div>
+              <hr class="dark horizontal">
+              <div class="d-flex ">
+                <i class="material-symbols-rounded text-sm my-auto me-1">schedule</i>
+                <p class="mb-0 text-sm"> Updated the 17/12/2024 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mt-4 mb-4">
+          <div class="card ">
+            <div class="card-body">
+              <h6 class="mb-0 "> Overview of this month </h6>
+              <p class="text-sm "> (<span class="font-weight-bolder">+15%</span>) in comparison with the last month. </p>
+              <div class="pe-2">
+                <div class="chart">
+                  <img src="https://stockanomaly.blob.core.windows.net/containerstock/anomaly_month.png" alt="Chart Image" class="img-fluid" style="height: 170px; width:auto ; object-fit: contain;">
+                </div>
+              </div>
+              <hr class="dark horizontal">
+              <div class="d-flex ">
+                <i class="material-symbols-rounded text-sm my-auto me-1">schedule</i>
+                <p class="mb-0 text-sm"> Updated the 17/12/2024  </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mt-4 mb-3">
+          <div class="card">
+            <div class="card-body">
+              <h6 class="mb-0 ">Scattering</h6>
+              <p class="text-sm ">All the data of the company</p>
+              <div class="pe-2">
+                <div class="chart">
+                  <img src="https://stockanomaly.blob.core.windows.net/containerstock/evaluate.png" alt="Chart Image" class="img-fluid" style="height: 170px; width:auto ; object-fit: contain;">
+                </div>
+              </div>
+              <hr class="dark horizontal">
+              <div class="d-flex ">
+                <i class="material-symbols-rounded text-sm my-auto me-1">schedule</i>
+                <p class="mb-0 text-sm">Updated the 17/12/2024</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-4">
+        <div class="col-lg-8 col-md-6 mb-md-0 mb-4">
+          <div class="card">
+            <div class="card-header pb-0">
+              <div class="row">
+                <div class="col-lg-6 col-7">
+                  <h6>Latest Data in the Database</h6>
+                </div>
+              </div>
+            </div>
+            <div class="card-body px-0 pb-2">
+              <div class="table-responsive">
+                <table class="table align-items-center mb-0">
+                  <thead>
+                    <tr>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-10">Date</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-10">Open</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-10">Close</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-10">High</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-10">Low</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-10">Anomaly</th>
+                    </tr>
+                  </thead>
+                  <tbody id="anomalies-table-body">
+                    <!-- Anomalies will be dynamically inserted here -->
+                  </tbody>
+                </table>
+                <div class="pagination-buttons text-center mt-3">
+                  <button id="prevPage" class="btn btn-outline-secondary" disabled>Previous</button>
+                  <button id="nextPage" class="btn btn-outline-secondary" disabled>Next</button>
+                </div>
+              </div>
+            </div>
+
+            <script>
+              document.addEventListener("DOMContentLoaded", function () {
+                const anomaliesTableBody = document.getElementById("anomalies-table-body");
+                const prevPageButton = document.getElementById("prevPage");
+                const nextPageButton = document.getElementById("nextPage");
+                const pageInfoElement = document.getElementById("page-info");
+            
+                let anomalies = []; // Array to store anomalies
+                let currentPage = 1; // Current page index
+                const rowsPerPage = 7; // Rows per page
+            
+                // Fetch the latest 28 anomalies from the backend
+                fetch('/latest_anomalies?count=28') // Adjust to your backend endpoint
+                  .then(response => {
+                    if (!response.ok) {
+                      throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                  })
+                  .then(data => {
+                    anomalies = data.anomalies; // Assign anomalies from the API response
+                    renderTable(); // Render the first page
+                    updatePaginationButtons(); // Update button state
+                  })
+                  .catch(error => {
+                    console.error("Error fetching anomalies:", error);
+                    anomaliesTableBody.innerHTML = `
+                      <tr>
+                        <td colspan="5" class="text-center text-danger">
+                          Unable to load anomalies. Please try again later.
+                        </td>
+                      </tr>
+                    `;
+                  });
+            
+                // Render the table based on the current page
+                function renderTable() {
+                  anomaliesTableBody.innerHTML = ""; // Clear table body
+                  const startIndex = (currentPage - 1) * rowsPerPage;
+                  const endIndex = Math.min(startIndex + rowsPerPage, anomalies.length);
+                  const totalPages = Math.ceil(anomalies.length / rowsPerPage);
+            
+                  for (let i = startIndex; i < endIndex; i++) {
+                    const anomaly = anomalies[i];
+                    const row = `
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2 py-1">
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">${new Date(anomaly.Date).toLocaleDateString()}</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="align-middle text-center text-sm">
+                          <span class="text-xs font-weight-bold"> $${anomaly.Open.toFixed(2)} </span>
+                        </td>
+                        <td class="align-middle text-center text-sm">
+                          <span class="text-xs font-weight-bold"> $${anomaly.Close.toFixed(2)} </span>
+                        </td>
+                        <td class="align-middle text-center text-sm">
+                          <span class="text-xs font-weight-bold"> $${anomaly.High.toFixed(2)} </span>
+                        </td>
+                        <td class="align-middle text-center text-sm">
+                          <span class="text-xs font-weight-bold"> $${anomaly.Low.toFixed(2)} </span>
+                        </td>
+                         <td class="align-middle text-center text-sm">
+                          <span class="text-xs font-weight-bold"> ${anomaly.Anomaly} </span>
+                        </td>
+                      </tr>`;
+                    anomaliesTableBody.innerHTML += row;
+                  }
+            
+                  // Update the page info
+                  if (pageInfoElement) {
+                    pageInfoElement.textContent = `Page ${currentPage} of ${totalPages}`;
+                  }
+                }
+            
+                // Update the state of pagination buttons
+                function updatePaginationButtons() {
+                  const totalPages = Math.ceil(anomalies.length / rowsPerPage);
+                  prevPageButton.disabled = currentPage === 1;
+                  nextPageButton.disabled = currentPage === totalPages;
+                }
+            
+                // Event listeners for pagination
+                prevPageButton.addEventListener("click", function () {
+                  if (currentPage > 1) {
+                    currentPage--;
+                    renderTable();
+                    updatePaginationButtons();
+                  }
+                });
+            
+                nextPageButton.addEventListener("click", function () {
+                  const totalPages = Math.ceil(anomalies.length / rowsPerPage);
+                  if (currentPage < totalPages) {
+                    currentPage++;
+                    renderTable();
+                    updatePaginationButtons();
+                  }
+                });
+              });
+            </script>
+            
+            
+        <!-- The side informations -->
+      </div>
+        <div class="col-lg-4 col-md-6" style="position: absolute; top: 800px; right: 0px; width: 415px;">
+          <div class="card h-30" style="border-radius: 8px; ">
+            <!-- Analyzed Events Section -->
+            <div class="card-header pb-0">
+              <h6>Analyzed events</h6>
+              <p class="text-sm">
+                <i class="fa fa-arrow-up text-success" aria-hidden="true"></i>
+                <span class="font-weight-bold analyzed-events-count">Loading...</span> this month
+              </p>
+            </div>
+        
+            <!-- Anomalies Section -->
+            <div class="card-header">
+              <h6>Anomalies</h6>
+              <p class="text-sm">
+                <i class="fa fa-arrow-up text-success" aria-hidden="true"></i>
+                <span class="font-weight-bold anomalies-count">Loading...</span> this month
+              </p>
+            </div>
+          </div>
+        </div>
+        
+
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              const eventsElement = document.querySelector(".analyzed-events-count");
+              const anomaliesElement = document.querySelector(".anomalies-count");
+          
+              // Fetch monthly statistics
+              fetch("/monthly_statistics")
+                .then((response) => {
+                  if (!response.ok) {
+                    throw new Error("Failed to fetch monthly statistics");
+                  }
+                  return response.json();
+                })
+                .then((data) => {
+                  // Populate the counts
+                  eventsElement.textContent = data.total_events;
+                  anomaliesElement.textContent = data.total_anomalies;
+                })
+                .catch((error) => {
+                  console.error("Error fetching monthly statistics:", error);
+                  eventsElement.textContent = "N/A";
+                  anomaliesElement.textContent = "N/A";
+                });
+            });
+          </script>
+          
+
+          <!-- The other one  -->
+           <br>
+           <div class="card shadow-lg border-0 rounded-3 h-auto" style="position: absolute; top: 570px; right: 0px; width: 415px; height: 100px;">
+            <div class="card-header" style="background-color: #6E4555; color: white; padding: 15px; border-radius: 10px 10px 0 0;">
+                <h6 class="mb-0">Daily Statistics -- Latest Update</h6>
+                <p class="text-sm mb-0" style="font-size: 16px;">
+                    <span id="last-day-date" class="font-weight-bold" style="font-size: 18px;">Loading...</span>
+                </p>
+            </div>
+            <div class="card-body p-3">
+                <p class="text-sm mb-0" style="font-size: 14px;">
+                    <strong>Open:</strong> <span id="last-day-open" class="font-weight-bold">Loading...</span><br>
+                    <strong>Close:</strong> <span id="last-day-close" class="font-weight-bold">Loading...</span><br>
+                    <strong>High:</strong> <span id="last-day-high" class="font-weight-bold">Loading...</span><br>
+                    <strong>Low:</strong> <span id="last-day-low" class="font-weight-bold">Loading...</span><br>
+                    <strong>Anomaly:</strong> <span id="last-day-anomaly" class="font-weight-bold text-danger">Loading...</span>
+                </p>
+            </div>
+        </div>
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+              const dailyStatElement = document.getElementById("daily-statistics"); // Ensure you have a placeholder in HTML for this part
+              
+              // Fetch the daily statistics
+              fetch('/daily_statistic')
+                  .then(response => {
+                      if (!response.ok) {
+                          throw new Error('Network response was not ok');
+                      }
+                      return response.json();
+                  })
+                  .then(data => {
+                      // Check if data exists and is not empty
+                      if (!data) {
+                          throw new Error('No data received');
+                      }
+          
+                      // Example of populating HTML with the fetched data
+                      const dateElement = document.getElementById("last-day-date");
+                      const openElement = document.getElementById("last-day-open");
+                      const closeElement = document.getElementById("last-day-close");
+                      const highElement = document.getElementById("last-day-high");
+                      const lowElement = document.getElementById("last-day-low");
+                      const anomalyElement = document.getElementById("last-day-anomaly");
+          
+                      // Update HTML elements with the latest data
+                      if (dateElement) dateElement.textContent = `Date: ${new Date(data.date).toLocaleDateString()}`;
+                      if (openElement) openElement.textContent = `${Number(data.open).toFixed(2)}$`;
+                      if (closeElement) closeElement.textContent = `${Number(data.close).toFixed(2)}$`;
+                      if (highElement) highElement.textContent = `${Number(data.high).toFixed(2)}$`;
+                      if (lowElement) lowElement.textContent = `${Number(data.low).toFixed(2)}$`;
+                      if (anomalyElement) anomalyElement.textContent = `${data.is_anomaly ? "Yes" : "No"}`;
+          
+                      // Optional: Add visual indication for anomaly
+                      if (data.is_anomaly && anomalyElement) {
+                          anomalyElement.classList.add('text-danger', 'font-weight-bold');
+                      }
+                  })
+                  .catch(error => {
+                      console.error("Error fetching daily statistics:", error);
+                      
+                      // Display error message in the UI
+                      if (dailyStatElement) {
+                          dailyStatElement.innerHTML = `
+                              <div class="alert alert-danger" role="alert">
+                                  Unable to load daily statistics. Please try again later.
+                                  <br>Error: ${error.message}
+                              </div>
+                          `;
+                      }
+                  });
+          });
+          </script>        
+          
+
+        </div>
+
+
+      </div>
+    </div>
+  </main>
+
+  <div class="fixed-plugin">
+    <a class="fixed-plugin-button text-dark position-fixed px-3 py-2">
+      <i class="material-symbols-rounded py-2">brightness_7</i> <!-- Sun icon -->
+      <i class="material-symbols-rounded py-2">brightness_4</i> <!-- Moon icon -->
+    </a>
+    <div class="card shadow-lg">
+      <div class="card-body pt-sm-3 pt-0">
+        
+        
+        <hr class="horizontal dark my-3">
+        <div class="mt-2 d-flex">
+          <h6 class="mb-0">Light / Dark</h6>
+          <div class="form-check form-switch ps-0 ms-auto my-auto">
+            <input class="form-check-input mt-1 ms-auto" type="checkbox" id="dark-version" onclick="darkMode(this)">
+          </div>
+        </div>
+        <hr class="horizontal dark my-sm-4">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--   Core JS Files   -->
+  <script src="../static/js/core/popper.min.js"></script>
+  <script src="../static/js/core/bootstrap.min.js"></script>
+  <script src="../static/js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="../static/js/plugins/smooth-scrollbar.min.js"></script>
+  <script src="../static/js/plugins/chartjs.min.js"></script>
+  <script>
+    var ctx = document.getElementById("chart-bars").getContext("2d");
+
+    new Chart(ctx, {
+      type: "bar",
+      data: {
+        labels: ["M", "T", "W", "T", "F", "S", "S"],
+        datasets: [{
+          label: "Views",
+          tension: 0.4,
+          borderWidth: 0,
+          borderRadius: 4,
+          borderSkipped: false,
+          backgroundColor: "#43A047",
+          data: [50, 45, 22, 28, 50, 60, 76],
+          barThickness: 'flex'
+        }, ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false,
+          }
+        },
+        interaction: {
+          intersect: false,
+          mode: 'index',
+        },
+        scales: {
+          y: {
+            grid: {
+              drawBorder: false,
+              display: true,
+              drawOnChartArea: true,
+              drawTicks: false,
+              borderDash: [5, 5],
+              color: '#e5e5e5'
+            },
+            ticks: {
+              suggestedMin: 0,
+              suggestedMax: 500,
+              beginAtZero: true,
+              padding: 10,
+              font: {
+                size: 14,
+                lineHeight: 2
+              },
+              color: "#737373"
+            },
+          },
+          x: {
+            grid: {
+              drawBorder: false,
+              display: false,
+              drawOnChartArea: false,
+              drawTicks: false,
+              borderDash: [5, 5]
+            },
+            ticks: {
+              display: true,
+              color: '#737373',
+              padding: 10,
+              font: {
+                size: 14,
+                lineHeight: 2
+              },
+            }
+          },
+        },
+      },
+    });
+
+
+    var ctx2 = document.getElementById("chart-line").getContext("2d");
+
+    new Chart(ctx2, {
+      type: "line",
+      data: {
+        labels: ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"],
+        datasets: [{
+          label: "Sales",
+          tension: 0,
+          borderWidth: 2,
+          pointRadius: 3,
+          pointBackgroundColor: "#43A047",
+          pointBorderColor: "transparent",
+          borderColor: "#43A047",
+          backgroundColor: "transparent",
+          fill: true,
+          data: [120, 230, 130, 440, 250, 360, 270, 180, 90, 300, 310, 220],
+          maxBarThickness: 6
+
+        }],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false,
+          },
+          tooltip: {
+            callbacks: {
+              title: function(context) {
+                const fullMonths = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                return fullMonths[context[0].dataIndex];
+              }
+            }
+          }
+        },
+        interaction: {
+          intersect: false,
+          mode: 'index',
+        },
+        scales: {
+          y: {
+            grid: {
+              drawBorder: false,
+              display: true,
+              drawOnChartArea: true,
+              drawTicks: false,
+              borderDash: [4, 4],
+              color: '#e5e5e5'
+            },
+            ticks: {
+              display: true,
+              color: '#737373',
+              padding: 10,
+              font: {
+                size: 12,
+                lineHeight: 2
+              },
+            }
+          },
+          x: {
+            grid: {
+              drawBorder: false,
+              display: false,
+              drawOnChartArea: false,
+              drawTicks: false,
+              borderDash: [5, 5]
+            },
+            ticks: {
+              display: true,
+              color: '#737373',
+              padding: 10,
+              font: {
+                size: 12,
+                lineHeight: 2
+              },
+            }
+          },
+        },
+      },
+    });
+
+    var ctx3 = document.getElementById("chart-line-tasks").getContext("2d");
+
+    new Chart(ctx3, {
+      type: "line",
+      data: {
+        labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+        datasets: [{
+          label: "Tasks",
+          tension: 0,
+          borderWidth: 2,
+          pointRadius: 3,
+          pointBackgroundColor: "#43A047",
+          pointBorderColor: "transparent",
+          borderColor: "#43A047",
+          backgroundColor: "transparent",
+          fill: true,
+          data: [50, 40, 300, 220, 500, 250, 400, 230, 500],
+          maxBarThickness: 6
+
+        }],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false,
+          }
+        },
+        interaction: {
+          intersect: false,
+          mode: 'index',
+        },
+        scales: {
+          y: {
+            grid: {
+              drawBorder: false,
+              display: true,
+              drawOnChartArea: true,
+              drawTicks: false,
+              borderDash: [4, 4],
+              color: '#e5e5e5'
+            },
+            ticks: {
+              display: true,
+              padding: 10,
+              color: '#737373',
+              font: {
+                size: 14,
+                lineHeight: 2
+              },
+            }
+          },
+          x: {
+            grid: {
+              drawBorder: false,
+              display: false,
+              drawOnChartArea: false,
+              drawTicks: false,
+              borderDash: [4, 4]
+            },
+            ticks: {
+              display: true,
+              color: '#737373',
+              padding: 10,
+              font: {
+                size: 14,
+                lineHeight: 2
+              },
+            }
+          },
+        },
+      },
+    });
+  </script>
+  <script>
+    var win = navigator.platform.indexOf('Win') > -1;
+    if (win && document.querySelector('#sidenav-scrollbar')) {
+      var options = {
+        damping: '0.5'
+      }
+      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+    }
+  </script>
+  <!-- Github buttons -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../static/js/material-dashboard.min.js?v=3.2.0"></script>
+</body>
+
+</html>
