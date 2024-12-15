@@ -5,6 +5,7 @@
 
 
 import pandas as pd
+from datetime import datetime, time
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
@@ -33,80 +34,65 @@ import builtins
 
 
 # In[2]:
-
+API_KEY = 'WRUHOXVS7HM2OG23'
+SYMBOL = "MSFT"
 
 connection_string = 'DefaultEndpointsProtocol=https;AccountName=stockanomaly1;AccountKey=O/zmEH0urLFXzD/RWyf0kXKTWwjIZbJ64zU+MfRepFFTj27oHR39A48elx9IdeOcYvWgWAtIa4k9+AStTgp5jQ==;EndpointSuffix=core.windows.net'
-container_name='containerstock'
+container_name = 'containerstock'
 blob_name = "MSFT.csv"
 
-blob_service_client = BlobServiceClient.from_connection_string(connection_string)
-container_client = blob_service_client.get_container_client(container_name)
-blob_client = container_client.get_blob_client(blob_name)
-blob_stream = blob_client.download_blob().readall()
-data_blob = pd.read_csv(BytesIO(blob_stream), parse_dates=["Date"])
+def is_time_in_interval(start_time, end_time, test_override=False):
+    if test_override:  # For testing purposes
+        return True
+    current_time = datetime.now().time()
+    return start_time <= current_time <= end_time
 
-
-# In[3]:
-
-
-last_date = data_blob["Date"].max()
-
-
-# # In[4]:
-
-
-# API_KEY = 'WRUHOXVS7HM2OG23'
-# SYMBOL = "MSFT"
-
-# def fetch_new_data(api_key, symbol, last_date):
-#     ts = TimeSeries(key=api_key, output_format="pandas")
-#     data, _ = ts.get_daily(symbol=symbol, outputsize="full")
+def fetch_new_data(api_key, symbol, last_date):
+    ts = TimeSeries(key=api_key, output_format="pandas")
+    data, _ = ts.get_daily(symbol=symbol, outputsize="full")
+    data.reset_index(inplace=True)  # Convert index to a column
+    data.rename(columns={"index": "Date"}, inplace=True)
     
-#     # Convertir l'index en colonne pour le filtrage
-#     data.reset_index(inplace=True)
-#     data.rename(columns={"index": "Date"}, inplace=True)
-    
-#     # Filtrer les données plus récentes que `last_date`
-#     new_data = data[pd.to_datetime(data["date"]) > last_date]
-#     print(f"{len(new_data)} nouvelles lignes récupérées.")
-    
-#     return new_data
+    new_data = data[pd.to_datetime(data["date"]) > last_date]
+    return new_data
 
-# # Appeler la fonction
-# new_data = fetch_new_data(API_KEY, SYMBOL, last_date)
+def rename_columns(new_data):
+    new_data = new_data.rename(columns={
+        "date"   : "Date",
+        "1. open": "Open",
+        "2. high": "High",
+        "3. low": "Low",
+        "4. close": "Close",
+        "5. volume": "Volume"
+    })
+    return new_data
 
+def update_stock_data():
+    try:
+        blob_service_client = BlobServiceClient.from_connection_string(connection_string)
+        container_client = blob_service_client.get_container_client(container_name)
+        blob_client = container_client.get_blob_client(blob_name)
 
-# # In[5]:
+        blob_stream = blob_client.download_blob().readall()
+        data_blob = pd.read_csv(BytesIO(blob_stream), parse_dates=["Date"])
+        last_date = data_blob["Date"].max()
+        new_data = fetch_new_data(API_KEY, SYMBOL, last_date)
+        
+        if not new_data.empty:
+            new_data = rename_columns(new_data)
+            combined_data = pd.concat([data_blob, new_data], ignore_index=True)
+            combined_data = combined_data.drop_duplicates(subset="Date", keep="last").sort_values("Date")
+            blob_client.upload_blob(combined_data.to_csv(index=False), overwrite=True)
+    except Exception as e:
+        pass
 
+START_TIME = time(19, 30)
+END_TIME = time(20, 00)     
 
-# def rename_columns(new_data):
-#     new_data = new_data.rename(columns={
-#         "date"   : "Date",
-#         "1. open": "Open",
-#         "2. high": "High",
-#         "3. low": "Low",
-#         "4. close": "Close",
-#         "5. volume": "Volume"
+TEST_MODE = False
 
-#     })
-#     return new_data
-# new_data= rename_columns(new_data)
-
-
-# # In[6]:
-
-
-# combined_data = pd.concat([data_blob, new_data], ignore_index=True)
-# combined_data = combined_data.drop_duplicates(subset="Date", keep="last").sort_values("Date")
-
-
-# # In[7]:
-
-
-# blob_client.upload_blob(combined_data.to_csv(index=False), overwrite=True)
-
-
-# In[8]:
+if is_time_in_interval(START_TIME, END_TIME, test_override=TEST_MODE):
+    update_stock_data()
 
 
 with open('MSFT_stocky.ipynb') as f:
@@ -206,7 +192,7 @@ class Anomaly(BaseModel):
 # In[14]:
 
 
-templates = Jinja2Templates(directory="templates")  # Path to your 'templates' folder
+templates = Jinja2Templates(directory="templates")
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 
@@ -268,7 +254,7 @@ def fetch_latest_anomalies(count: int = 28):
     latest_data = sorted_df.head(count)
     anomalies = latest_data[["Date", "Open", "Close", "High", "Low","Anomaly"]].to_dict(orient="records")
     for anomaly in anomalies:
-        anomaly["Date"] = anomaly["Date"].strftime("%Y-%m-%d")  # Format dates
+        anomaly["Date"] = anomaly["Date"].strftime("%Y-%m-%d")
     return anomalies
 
 
