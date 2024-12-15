@@ -55,55 +55,55 @@ last_date = data_blob["Date"].max()
 # In[4]:
 
 
-# API_KEY = 'OYEDBWJJQM4XPHZ9'
-# SYMBOL = "MSFT"
+API_KEY = 'WRUHOXVS7HM2OG23'
+SYMBOL = "MSFT"
 
-# def fetch_new_data(api_key, symbol, last_date):
-#     ts = TimeSeries(key=api_key, output_format="pandas")
-#     data, _ = ts.get_daily(symbol=symbol, outputsize="full")
+def fetch_new_data(api_key, symbol, last_date):
+    ts = TimeSeries(key=api_key, output_format="pandas")
+    data, _ = ts.get_daily(symbol=symbol, outputsize="full")
     
-#     # Convertir l'index en colonne pour le filtrage
-#     data.reset_index(inplace=True)
-#     data.rename(columns={"index": "Date"}, inplace=True)
+    # Convertir l'index en colonne pour le filtrage
+    data.reset_index(inplace=True)
+    data.rename(columns={"index": "Date"}, inplace=True)
     
-#     # Filtrer les données plus récentes que `last_date`
-#     new_data = data[pd.to_datetime(data["date"]) > last_date]
-#     print(f"{len(new_data)} nouvelles lignes récupérées.")
+    # Filtrer les données plus récentes que `last_date`
+    new_data = data[pd.to_datetime(data["date"]) > last_date]
+    print(f"{len(new_data)} nouvelles lignes récupérées.")
     
-#     return new_data
+    return new_data
 
-# # Appeler la fonction
-# new_data = fetch_new_data(API_KEY, SYMBOL, last_date)
-
-
-# # In[5]:
+# Appeler la fonction
+new_data = fetch_new_data(API_KEY, SYMBOL, last_date)
 
 
-# def rename_columns(new_data):
-#     new_data = new_data.rename(columns={
-#         "date"   : "Date",
-#         "1. open": "Open",
-#         "2. high": "High",
-#         "3. low": "Low",
-#         "4. close": "Close",
-#         "5. volume": "Volume"
-
-#     })
-#     return new_data
-# new_data= rename_columns(new_data)
+# In[5]:
 
 
-# # In[6]:
+def rename_columns(new_data):
+    new_data = new_data.rename(columns={
+        "date"   : "Date",
+        "1. open": "Open",
+        "2. high": "High",
+        "3. low": "Low",
+        "4. close": "Close",
+        "5. volume": "Volume"
+
+    })
+    return new_data
+new_data= rename_columns(new_data)
 
 
-# combined_data = pd.concat([data_blob, new_data], ignore_index=True)
-# combined_data = combined_data.drop_duplicates(subset="Date", keep="last").sort_values("Date")
+# In[6]:
 
 
-# # In[7]:
+combined_data = pd.concat([data_blob, new_data], ignore_index=True)
+combined_data = combined_data.drop_duplicates(subset="Date", keep="last").sort_values("Date")
 
 
-# blob_client.upload_blob(combined_data.to_csv(index=False), overwrite=True)
+# In[7]:
+
+
+blob_client.upload_blob(combined_data.to_csv(index=False), overwrite=True)
 
 
 # In[8]:
