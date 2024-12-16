@@ -42,10 +42,12 @@ container_name = 'containerstock'
 blob_name = "MSFT.csv"
 
 def is_time_in_interval(start_time, end_time, test_override=False):
-    if test_override:  # For testing purposes
+    if test_override: 
         return True
-    current_time = datetime.now().time()
-    return start_time <= current_time <= end_time
+    current_time = datetime.now(timezone.utc).time()
+    result = start_time <= current_time <= end_time
+    return result
+
 
 def fetch_new_data(api_key, symbol, last_date):
     ts = TimeSeries(key=api_key, output_format="pandas")
@@ -86,8 +88,8 @@ def update_stock_data():
     except Exception as e:
         pass
 
-START_TIME = time(19, 30)
-END_TIME = time(20, 00)     
+START_TIME = time(19, 0)
+END_TIME = time(19, 30)   
 
 TEST_MODE = False
 
